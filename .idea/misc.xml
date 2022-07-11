@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Admin/Desktop/WeatherWM/app/src/main/res/drawable/ic_drop.xml" value="0.243" />
+        <entry key="..\:/Users/Admin/Desktop/WeatherWM/app/src/main/res/drawable/ic_rainy.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_sunnycloudy.xml" value="0.214" />
         <entry key="app/src/main/res/drawable/ic_thunder.xml" value="0.214" />
       </map>
