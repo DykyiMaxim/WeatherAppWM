@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.plcoding.weatherapp.domain.location.LocationTreacker
 import com.plcoding.weatherapp.domain.repository.WeatherRepository
+import com.plcoding.weatherapp.domain.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -29,10 +30,31 @@ class WeatherViewModel @Inject constructor(
             )
             locationTreacker.getCurrLocation()?.let{ location ->
                 when(val result = repository.getWeatherData(location.latitude, location.longitude)){
+                    is Resource.Success ->{
+                        state = state.copy(
+                            weatherInfo = result.data,
+                            isLoading = false,
+                            error = null
+                        )
+                    }
+                    is Resource.Error->{
+                        state=  state.copy(
+                            weatherInfo = null,
+                            isLoading = false,
+                            error = result.message
+                        )
+
+                    }
 
                 }
 
+            }?:kotlin.run {
+                state = state.copy(
+                    isLoading = false,
+                    error = "Turn on location setting"
+                )
             }
+
 
         }
     }
