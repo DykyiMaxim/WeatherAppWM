@@ -8,6 +8,6 @@ interface WeatherAPI {
 
     suspend fun getWeatherData(
         @Query("latitude") lat:Double,
-        @Query("longitude ") long: Double
+        @Query("longitude") long: Double
     ):WeatherDto
 }

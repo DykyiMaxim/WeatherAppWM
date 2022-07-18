@@ -6,9 +6,9 @@ import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
-
 
 
 @Composable
@@ -32,7 +32,7 @@ fun WeatherDataDisplay(
         )
         Spacer(modifier = modifier.width(4.dp))
         Text(text = "$value$unit",
-        style = androidx.compose.ui.text.TextStyle.Default)
+            color = Color.White )
 
     }
 

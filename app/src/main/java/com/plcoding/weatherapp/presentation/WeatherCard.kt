@@ -9,12 +9,14 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.plcoding.weatherapp.R
+import com.plcoding.weatherapp.presentation.ui.theme.CristalWhite
 import java.time.format.DateTimeFormatter
 import kotlin.math.roundToInt
 
@@ -41,7 +43,7 @@ import kotlin.math.roundToInt
                     data.time.format(DateTimeFormatter.ofPattern("HH:mm"))
                 }",
                     modifier = modifier.align(Alignment.End),
-                    color = androidx.compose.ui.graphics.Color.White
+                    color = CristalWhite
 
                 )
                 Spacer(modifier = Modifier.height(16.dp))
@@ -54,12 +56,12 @@ import kotlin.math.roundToInt
                 Text(
                     text ="${data.temperatureCelsius}℃",
                     fontSize = 50.sp,
-                    color = androidx.compose.ui.graphics.Color.White
+                    color = CristalWhite
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(text = data.WeatherType.weatherDesc,
                     fontSize = 20.sp,
-                    color = androidx.compose.ui.graphics.Color.White
+                    color = CristalWhite
                 )
                 Spacer(modifier = Modifier.height(32.dp))
                 Row(
@@ -71,7 +73,7 @@ import kotlin.math.roundToInt
                         value = data.pressure.roundToInt(),
                         unit = "hpa",
                         icon = ImageVector.vectorResource(id = R.drawable.ic_pressure),
-                        iconTint = androidx.compose.ui.graphics.Color.White,
+                        iconTint = CristalWhite
 
 
                     )
@@ -80,7 +82,7 @@ import kotlin.math.roundToInt
                         value = data.humidity.roundToInt(),
                         unit = "%",
                         icon = ImageVector.vectorResource(id = R.drawable.ic_drop),
-                        iconTint = androidx.compose.ui.graphics.Color.White,
+                        iconTint = CristalWhite,
 
 
                         )
@@ -89,7 +91,7 @@ import kotlin.math.roundToInt
                         value = data.WindSpeed.roundToInt(),
                         unit = "km/h",
                         icon = ImageVector.vectorResource(id = R.drawable.ic_wind),
-                        iconTint = androidx.compose.ui.graphics.Color.White,
+                        iconTint =CristalWhite,
 
 
                         )
