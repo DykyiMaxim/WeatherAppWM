@@ -2,121 +2,124 @@ package com.plcoding.weatherapp.domain.weather
 
 import androidx.annotation.DrawableRes
 import com.plcoding.weatherapp.R
+import com.plcoding.weatherapp.presentation.TextRes
 
 sealed class WeatherType(
-    val weatherDesc: String,
+    val weatherDesc: TextRes,
     @DrawableRes val iconRes: Int
 ) {
     object ClearSky : WeatherType(
-        weatherDesc = "Clear sky",
+        weatherDesc = TextRes.StringRes(R.string.sunny, minName),
         iconRes = R.drawable.ic_sunny
     )
     object MainlyClear : WeatherType(
-        weatherDesc = "Mainly clear",
+        weatherDesc = TextRes.StringRes(R.string.MainlyClear, minName),
         iconRes = R.drawable.ic_cloudy
     )
     object PartlyCloudy : WeatherType(
-        weatherDesc = "Partly cloudy",
+        weatherDesc = TextRes.StringRes(R.string.PartlyCloudy, minName),
         iconRes = R.drawable.ic_cloudy
     )
     object Overcast : WeatherType(
-        weatherDesc = "Overcast",
+        weatherDesc = TextRes.StringRes(R.string.Overcast, minName),
         iconRes = R.drawable.ic_cloudy
     )
     object Foggy : WeatherType(
-        weatherDesc = "Foggy",
+        weatherDesc = TextRes.StringRes(R.string.Foggy, minName),
         iconRes = R.drawable.ic_very_cloudy
     )
     object DepositingRimeFog : WeatherType(
-        weatherDesc = "Depositing rime fog",
+        weatherDesc = TextRes.StringRes(R.string.DepositingRimeFog, minName),
         iconRes = R.drawable.ic_very_cloudy
     )
     object LightDrizzle : WeatherType(
-        weatherDesc = "Light drizzle",
+        weatherDesc = TextRes.StringRes(R.string.LightDrizzle, minName),
         iconRes = R.drawable.ic_rainshower
     )
     object ModerateDrizzle : WeatherType(
-        weatherDesc = "Moderate drizzle",
+        weatherDesc = TextRes.StringRes(R.string.ModerateDrizzle, minName),
         iconRes = R.drawable.ic_rainshower
     )
     object DenseDrizzle : WeatherType(
-        weatherDesc = "Dense drizzle",
+        weatherDesc = TextRes.StringRes(R.string.DenseDrizzle, minName),
         iconRes = R.drawable.ic_rainshower
     )
     object LightFreezingDrizzle : WeatherType(
-        weatherDesc = "Slight freezing drizzle",
+        weatherDesc = TextRes.StringRes(R.string.LightDrizzle, minName),
         iconRes = R.drawable.ic_snowyrainy
     )
     object DenseFreezingDrizzle : WeatherType(
-        weatherDesc = "Dense freezing drizzle",
+        weatherDesc = TextRes.StringRes(R.string.DenseDrizzle, minName),
         iconRes = R.drawable.ic_snowyrainy
     )
     object SlightRain : WeatherType(
-        weatherDesc = "Slight rain",
+        weatherDesc = TextRes.StringRes(R.string.SlghtRain, minName),
         iconRes = R.drawable.ic_rainy
     )
     object ModerateRain : WeatherType(
-        weatherDesc = "Rainy",
+        weatherDesc = TextRes.StringRes(R.string.ModerateRain, minName),
         iconRes = R.drawable.ic_rainy
     )
     object HeavyRain : WeatherType(
-        weatherDesc = "Heavy rain",
+        weatherDesc = TextRes.StringRes(R.string.HeavyRain, minName),
         iconRes = R.drawable.ic_rainy
     )
     object HeavyFreezingRain: WeatherType(
-        weatherDesc = "Heavy freezing rain",
+        weatherDesc = TextRes.StringRes(R.string.HeavyFreezingRain, minName),
         iconRes = R.drawable.ic_snowyrainy
     )
     object SlightSnowFall: WeatherType(
-        weatherDesc = "Slight snow fall",
+        weatherDesc = TextRes.StringRes(R.string.SlightSnowFall, minName),
         iconRes = R.drawable.ic_snowy
     )
     object ModerateSnowFall: WeatherType(
-        weatherDesc = "Moderate snow fall",
+        weatherDesc = TextRes.StringRes(R.string.ModerateSnowFall, minName),
         iconRes = R.drawable.ic_heavysnow
     )
     object HeavySnowFall: WeatherType(
-        weatherDesc = "Heavy snow fall",
+        weatherDesc = TextRes.StringRes(R.string.HeavySnowFall, minName),
         iconRes = R.drawable.ic_heavysnow
     )
     object SnowGrains: WeatherType(
-        weatherDesc = "Snow grains",
+        weatherDesc = TextRes.StringRes(R.string.SnowGrains, minName),
         iconRes = R.drawable.ic_heavysnow
     )
     object SlightRainShowers: WeatherType(
-        weatherDesc = "Slight rain showers",
+        weatherDesc = TextRes.StringRes(R.string.SlightRainShowers, minName),
         iconRes = R.drawable.ic_rainshower
     )
     object ModerateRainShowers: WeatherType(
-        weatherDesc = "Moderate rain showers",
+        weatherDesc = TextRes.StringRes(R.string.ModerateRainShowers, minName),
         iconRes = R.drawable.ic_rainshower
     )
     object ViolentRainShowers: WeatherType(
-        weatherDesc = "Violent rain showers",
+        weatherDesc = TextRes.StringRes(R.string.ViolentRainShowers, minName),
         iconRes = R.drawable.ic_rainshower
     )
     object SlightSnowShowers: WeatherType(
-        weatherDesc = "Light snow showers",
+        weatherDesc = TextRes.StringRes(R.string.SlightSnowShowers, minName),
         iconRes = R.drawable.ic_snowy
     )
     object HeavySnowShowers: WeatherType(
-        weatherDesc = "Heavy snow showers",
+        weatherDesc = TextRes.StringRes(R.string.HeavySnowShowers, minName),
         iconRes = R.drawable.ic_snowy
     )
     object ModerateThunderstorm: WeatherType(
-        weatherDesc = "Moderate thunderstorm",
+        weatherDesc = TextRes.StringRes(R.string.ModerateThunderstorm, minName),
         iconRes = R.drawable.ic_thunder
     )
     object SlightHailThunderstorm: WeatherType(
-        weatherDesc = "Thunderstorm with slight hail",
+        weatherDesc = TextRes.StringRes(R.string.SlightHailThunderstorm, minName),
         iconRes = R.drawable.ic_rainythunder
     )
     object HeavyHailThunderstorm: WeatherType(
-        weatherDesc = "Thunderstorm with heavy hail",
+        weatherDesc = TextRes.StringRes(R.string.HeavyHailThunderstorm, minName),
         iconRes = R.drawable.ic_rainythunder
     )
 
+
     companion object {
+        val minName =3
         fun fromWMO(code: Int): WeatherType {
             return when(code) {
                 0 -> ClearSky
@@ -147,7 +150,7 @@ sealed class WeatherType(
                 95 -> ModerateThunderstorm
                 96 -> SlightHailThunderstorm
                 99 -> HeavyHailThunderstorm
-                else -> ClearSky
+                else -> MainlyClear
             }
         }
     }

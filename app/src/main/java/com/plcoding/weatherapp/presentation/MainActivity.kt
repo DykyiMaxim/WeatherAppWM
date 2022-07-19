@@ -4,10 +4,8 @@ import android.Manifest
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.ManagedActivityResultLauncher
 import androidx.activity.compose.setContent
 import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.compose.foundation.background
@@ -58,9 +56,16 @@ class MainActivity : ComponentActivity() {
 
                 }
                 if(viewModel.state.isLoading){
-                    CircularProgressIndicator(
-                        modifier = Modifier
-                    )
+                    Box(
+                        contentAlignment = Alignment.Center,
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        CircularProgressIndicator()
+                    }
+
+
+
+
                 }
                 viewModel.state.error?.let{ error->
                     Toast.makeText(this@MainActivity,error,Toast.LENGTH_LONG)

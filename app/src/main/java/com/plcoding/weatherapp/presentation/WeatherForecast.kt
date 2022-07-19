@@ -8,7 +8,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.textInputServiceFactory
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.plcoding.weatherapp.R
 
 @Composable
 fun WeatherForecast(
@@ -22,7 +24,7 @@ fun WeatherForecast(
                 .padding(horizontal = 16.dp)
         ) {
             Text(
-                text = "Today",
+                text = stringResource(id = R.string.Today),
                 color = Color.White
 
             )
