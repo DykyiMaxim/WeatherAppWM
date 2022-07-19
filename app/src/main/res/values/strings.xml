@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">WeatherWM</string>
+    <string name="app_name">Weather</string>
+    <string name="Today">Today</string>
+    <string name="humidity">%</string>
+    <string name="hpa">hpa</string>
+    <string name="windsepeed">km/h</string>
+
+
+    <string name="sunny">"Clear sky"</string>
+     <string name="MainlyClear">Mainly clear</string>
+     <string name="PartlyCloudy">Partly cloudy</string>
+     <string name="Overcast">Overcast</string>
+    <string name="Foggy">Foggy</string>
+     <string name="DepositingRimeFog">Depositing rime fog</string>
+    <string name="LightDrizzle">Light drizzle</string>
+     <string name="ModerateDrizzle">Moderate drizzle</string>
+    <string name="DenseDrizzle">Dense drizzle</string>
+     <string name="LightFreezingDrizzle">Light freezing drizzle</string>
+    <string name="DenseFreezingDrizzle">Dense freezing drizzle</string>
+     <string name="SlghtRain">Slight rain</string>
+    <string name="ModerateRain">Moderate rain</string>
+     <string name="HeavyRain">Heavy rain</string>
+     <string name="HeavyFreezingRain">Heavy freezing rain</string>
+    <string name="SlightSnowFall">Slight snow fall</string>
+     <string name="ModerateSnowFall">Moderate snow fall</string>
+    <string name="HeavySnowFall">Heavy snow fall</string>
+     <string name="SnowGrains">Snow grains</string>
+    <string name="SlightRainShowers">Slight rain showers</string>
+     <string name="ModerateRainShowers">Moderate rain showers</string>
+    <string name="ViolentRainShowers">Violent rain showers</string>
+     <string name="SlightSnowShowers">Slight snow showers</string>
+    <string name="HeavySnowShowers">Heavy snow showers</string>
+     <string name="ModerateThunderstorm">Moderate thunderstorm</string>
+    <string name="SlightHailThunderstorm">Slight hail thunderstorm</string>
+     <string name="HeavyHailThunderstorm">Heavy hail thunderstorm</string>
+
+
 </resources>

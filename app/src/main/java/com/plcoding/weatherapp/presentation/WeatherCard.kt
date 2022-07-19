@@ -1,6 +1,7 @@
 package com.plcoding.weatherapp.presentation
 
 
+import android.content.Context
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -9,9 +10,10 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -22,12 +24,20 @@ import kotlin.math.roundToInt
 
 
 @Composable
- fun WeatherCard(
+fun WeatherCard(
     state: WeatherState,
     backgroundColor:androidx.compose.ui.graphics.Color,
     modifier: Modifier = Modifier
- ) {
+) {
+    val context:Context = LocalContext.current
+
+
     state.weatherInfo?.currentWeatherData?.let { data ->
+        val context:Context = LocalContext.current
+        val stringDisc = data.WeatherType.weatherDesc.astoString(context)
+
+
+
         Card(
             backgroundColor = backgroundColor,
             shape = RoundedCornerShape(10.dp),
@@ -39,8 +49,7 @@ import kotlin.math.roundToInt
                     .padding(16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(text = "Today ${
-                    data.time.format(DateTimeFormatter.ofPattern("HH:mm"))
+                Text(text = " ${stringResource(id = R.string.Today) +" "+ data.time.format(DateTimeFormatter.ofPattern("HH:mm"))
                 }",
                     modifier = modifier.align(Alignment.End),
                     color = CristalWhite
@@ -59,7 +68,8 @@ import kotlin.math.roundToInt
                     color = CristalWhite
                 )
                 Spacer(modifier = Modifier.height(16.dp))
-                Text(text = data.WeatherType.weatherDesc,
+
+                Text(text = stringDisc,
                     fontSize = 20.sp,
                     color = CristalWhite
                 )
@@ -68,10 +78,10 @@ import kotlin.math.roundToInt
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceAround
                 ) {
-                    
+
                     WeatherDataDisplay(
                         value = data.pressure.roundToInt(),
-                        unit = "hpa",
+                        unit = stringResource(id = R.string.hpa),
                         icon = ImageVector.vectorResource(id = R.drawable.ic_pressure),
                         iconTint = CristalWhite
 
@@ -80,7 +90,7 @@ import kotlin.math.roundToInt
 
                     WeatherDataDisplay(
                         value = data.humidity.roundToInt(),
-                        unit = "%",
+                        unit = stringResource(id = R.string.humidity),
                         icon = ImageVector.vectorResource(id = R.drawable.ic_drop),
                         iconTint = CristalWhite,
 
@@ -89,7 +99,7 @@ import kotlin.math.roundToInt
 
                     WeatherDataDisplay(
                         value = data.WindSpeed.roundToInt(),
-                        unit = "km/h",
+                        unit = stringResource(id = R.string.windsepeed),
                         icon = ImageVector.vectorResource(id = R.drawable.ic_wind),
                         iconTint =CristalWhite,
 
@@ -102,4 +112,5 @@ import kotlin.math.roundToInt
 
         }
     }
+
 }
