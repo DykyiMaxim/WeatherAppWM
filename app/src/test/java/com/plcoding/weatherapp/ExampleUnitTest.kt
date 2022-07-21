@@ -1,4 +1,4 @@
-package com.plcoding.weatherapp
+package com.wmDykyi.weatherapp
 
 import org.junit.Test
 
