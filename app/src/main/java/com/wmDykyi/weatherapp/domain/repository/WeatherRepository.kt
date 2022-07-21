@@ -1,7 +1,7 @@
-package com.wmDykyi.weatherapp.domain.repository
+package com.wmdykyi.weatherapp.domain.repository
 
-import com.wmDykyi.weatherapp.domain.util.Resource
-import com.wmDykyi.weatherapp.domain.weather.WeatherInfo
+import com.wmdykyi.weatherapp.domain.util.Resource
+import com.wmdykyi.weatherapp.domain.weather.WeatherInfo
 
 interface WeatherRepository {
     suspend fun getWeatherData(lat: Double, long:Double):Resource<WeatherInfo>
