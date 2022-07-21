@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Weather</string>
-    <string name="Today">Today</string>
+    <string name="Today">Сьогодні</string>
     <string name="humidity">%</string>
-    <string name="hpa">hpa</string>
-    <string name="windsepeed">km/h</string>
+    <string name="hpa">мм</string>
+    <string name="windsepeed">км/г</string>
 
 
-    <string name="sunny">"Clear sky"</string>
-    <string name="MainlyClear">MainlyClear</string>
-    <string name="PartlyCloudy">PartlyCloudy</string>
+
+    <string name="sunny">"Ясно"</string>
+    <string name="MainlyClear">Переважно ясно</string>
+    <string name="PartlyCloudy">Мінлива хмарність</string>
     <string name="Overcast">Overcast</string>
-    <string name="Foggy">Foggy</string>
-    <string name="DepositingRimeFog">DepositingRimeFog</string>
-    <string name="LightDrizzle">LightDrizzle</string>
-    <string name="ModerateDrizzle">ModerateDrizzle</string>
-    <string name="DenseDrizzle">DenseDrizzle</string>
-    <string name="LightFreezingDrizzle">LightFreezingDrizzle</string>
-    <string name="DenseFreezingDrizzle">DenseFreezingDrizzle</string>
-    <string name="SlghtRain">Slight rain</string>
-    <string name="ModerateRain">ModerateRain</string>
-    <string name="HeavyRain">HeavyRain</string>
-    <string name="HeavyFreezingRain">HeavyFreezingRain</string>
-    <string name="SlightSnowFall">SlightSnowFall</string>
-    <string name="ModerateSnowFall">ModerateSnowFall</string>
-    <string name="HeavySnowFall">HeavySnowFall</string>
-    <string name="SnowGrains">SnowGrains</string>
-    <string name="SlightRainShowers">SlightRainShowers</string>
-    <string name="ModerateRainShowers">ModerateRainShowers</string>
-    <string name="ViolentRainShowers">ViolentRainShowers</string>
-    <string name="SlightSnowShowers">SlightSnowShowers</string>
-    <string name="HeavySnowShowers">HeavySnowShowers</string>
-    <string name="ModerateThunderstorm">ModerateThunderstorm</string>
-    <string name="SlightHailThunderstorm">SlightHailThunderstorm</string>
-    <string name="HeavyHailThunderstorm">HeavyHailThunderstorm</string>
+    <string name="Foggy">Хмари</string>
+    <string name="DepositingRimeFog">Відкладення інею туману</string>
+    <string name="LightDrizzle">Легкий дощ</string>
+    <string name="ModerateDrizzle">Помірний дощ</string>
+    <string name="DenseDrizzle">Щільний дощ</string>
+    <string name="LightFreezingDrizzle">Легкий морозний дощ</string>
+    <string name="DenseFreezingDrizzle">Густий морозний дощ</string>
+    <string name="SlghtRain">Невеликий дощ</string>
+    <string name="ModerateRain">Помірний дощ</string>
+    <string name="HeavyRain">Сильний дощ</string>
+    <string name="HeavyFreezingRain">Сильний крижаний дощ</string>
+    <string name="SlightSnowFall">Невеликий снігопад</string>
+    <string name="ModerateSnowFall">Помірний снігопад</string>
+    <string name="HeavySnowFall">Сильний снігопад</string>
+    <string name="SnowGrains">Град</string>
+    <string name="SlightRainShowers">Невелика ливень</string>
+    <string name="ModerateRainShowers">Помірний ливень </string>
+    <string name="ViolentRainShowers">Жорстокий ливень</string>
+    <string name="SlightSnowShowers">Невеликий снігопад</string>
+    <string name="HeavySnowShowers">Сильний снігопад</string>
+    <string name="ModerateThunderstorm">Помірна гроза</string>
+    <string name="SlightHailThunderstorm">Гроза</string>
+    <string name="HeavyHailThunderstorm">Сильна гроза з градом</string>
 </resources>
