@@ -1,8 +1,7 @@
 package com.wmDykyi.weatherapp.di
 
-import com.wmDykyi.weatherapp.data.location.DefaultLocationTreacker
+
 import com.wmDykyi.weatherapp.data.repository.WeatherRepositoryImpl
-import com.wmDykyi.weatherapp.domain.location.LocationTreacker
 import com.wmDykyi.weatherapp.domain.repository.WeatherRepository
 import dagger.Binds
 import dagger.Module

@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Weather</string>
     <string name="Today">Сегодня</string>
+    <string name="Tomorrow">Завтра</string>
     <string name="humidity">%</string>
     <string name="hpa">мм</string>
     <string name="windsepeed">км/ч</string>
@@ -34,7 +35,6 @@
     <string name="ModerateThunderstorm">Умеренная гроза</string>
     <string name="SlightHailThunderstorm">Слабый град с грозой</string>
     <string name="HeavyHailThunderstorm">Гроза с сильным градом</string>
-
 
 
 </resources>

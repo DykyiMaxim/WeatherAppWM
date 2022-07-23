@@ -33,6 +33,7 @@
      <string name="ModerateThunderstorm">Moderate thunderstorm</string>
     <string name="SlightHailThunderstorm">Slight hail thunderstorm</string>
      <string name="HeavyHailThunderstorm">Heavy hail thunderstorm</string>
+    <string name="Tomorrow">Tomorrow</string>
 
 
 </resources>

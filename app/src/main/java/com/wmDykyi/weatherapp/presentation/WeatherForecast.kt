@@ -13,7 +13,7 @@ import androidx.compose.ui.unit.dp
 import com.wmDykyi.weatherapp.R
 
 @Composable
-fun WeatherForecast(
+fun WeatherForecastToday(
     state:WeatherState,
     modifier: Modifier = Modifier
 ){
@@ -30,7 +30,7 @@ fun WeatherForecast(
             )
             Spacer(modifier = Modifier.height(16.dp))
             LazyRow(content ={
-                items(data){wetherData->
+                items(data.subList(0,24)){wetherData->
                     HourlyWeatherData(
                         weatherData = wetherData,
                         modifier = Modifier

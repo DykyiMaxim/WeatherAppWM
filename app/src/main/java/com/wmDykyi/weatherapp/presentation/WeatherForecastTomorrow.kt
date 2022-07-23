@@ -20,16 +20,16 @@ fun WeatherForecastTomorrow(
             Column(
                 modifier = modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
+                    .padding(horizontal = 10.dp)
             ) {
                 Text(
-                    text = stringResource(id = R.string.Today),
+                    text = stringResource(id = R.string.Tomorrow),
                     color = Color.White
 
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 LazyRow(content ={
-                    items(data){wetherData->
+                    items(data.subList(24,48)){wetherData->
                         HourlyWeatherData(
                             weatherData = wetherData,
                             modifier = Modifier

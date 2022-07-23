@@ -18,7 +18,6 @@ import com.wmDykyi.weatherapp.presentation.ui.theme.DarkBlue
 import com.wmDykyi.weatherapp.presentation.ui.theme.DeepBlue
 import com.wmDykyi.weatherapp.presentation.ui.theme.WeatherWMTheme
 import dagger.hilt.android.AndroidEntryPoint
-import okhttp3.logging.HttpLoggingInterceptor
 
 @AndroidEntryPoint
 
@@ -49,10 +48,12 @@ class MainActivity : ComponentActivity() {
                 ) {
                     WeatherCard(
                         state = viewModel.state,
-                        backgroundColor = DeepBlue 
+                        backgroundColor = DeepBlue
                     )
                     Spacer(modifier = Modifier.height(10.dp))
-                    WeatherForecast(state = viewModel.state)
+                    WeatherForecastToday(state =viewModel.state )
+                    Spacer(modifier = Modifier.height(10.dp))
+                    WeatherForecastTomorrow(state = viewModel.state)
 
                 }
                 if(viewModel.state.isLoading){

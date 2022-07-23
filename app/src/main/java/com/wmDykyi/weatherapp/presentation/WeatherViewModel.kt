@@ -5,20 +5,21 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.wmDykyi.weatherapp.data.date.DefaultDatePick
+import com.wmDykyi.weatherapp.domain.Date.DateInst
 import com.wmDykyi.weatherapp.domain.location.LocationTreacker
 import com.wmDykyi.weatherapp.domain.repository.WeatherRepository
 import com.wmDykyi.weatherapp.domain.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import okhttp3.OkHttp
-import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
+import java.time.LocalDate
 import javax.inject.Inject
 
 @HiltViewModel
 class WeatherViewModel @Inject constructor(
     private val repository:WeatherRepository,
-    private val locationTreacker: LocationTreacker
+    private val locationTreacker: LocationTreacker,
+    private val defaultDatePick: DateInst
 
 ):ViewModel() {
 
@@ -32,7 +33,7 @@ class WeatherViewModel @Inject constructor(
                 error = null
             )
             locationTreacker.getCurrLocation()?.let{ location ->
-                when(val result = repository.getWeatherData(location.latitude, location.longitude)){
+                when(val result = repository.getWeatherData(location.latitude, location.longitude, startD =defaultDatePick.getToday(), endD =defaultDatePick.getTomorrow())){
                     is Resource.Success ->{
                         state = state.copy(
                             weatherInfo = result.data,
