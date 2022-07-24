@@ -52,7 +52,7 @@ class MainActivity : ComponentActivity() {
                     )
                     Spacer(modifier = Modifier.height(10.dp))
                     WeatherForecastToday(state =viewModel.state )
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(15.dp))
                     WeatherForecastTomorrow(state = viewModel.state)
 
                 }

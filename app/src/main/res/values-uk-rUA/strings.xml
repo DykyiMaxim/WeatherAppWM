@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Weather</string>
     <string name="Today">Сьогодні</string>
-    \   <string name="Tomorrow">Завтра</string>
+    <string name="Tomorrow">Завтра</string>
     <string name="humidity">%</string>
     <string name="hpa">мм</string>
     <string name="windsepeed">км/г</string>
