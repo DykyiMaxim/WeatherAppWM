@@ -16,6 +16,7 @@
         android:theme="@style/Theme.WeatherWMApp">
         <activity
             android:name=".presentation.MainActivity"
+            android:screenOrientation="locked"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.WeatherWMApp">
